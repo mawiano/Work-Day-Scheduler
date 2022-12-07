@@ -20,4 +20,21 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.(1)
+  
 });
+//! Get date and time to post
+ var date = dayjs().format("MMM DD, YYYY hh:mm a");
+ $("#currentDay").text(date);
+startTimer();
+
+function startTimer(){
+  setInterval(function(){
+    var now = dayjs();
+    var date = dayjs().format;
+    var date = now.format("MMM DD, YYYY hh:mm a");
+    var currentHour = now.hour();
+    console.log(currentHour);
+    $("#currentDay").text(date);
+
+  },60000);
+}
